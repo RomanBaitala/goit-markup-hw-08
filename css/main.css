@@ -1,8 +1,17 @@
 :root {
-  --typical-margin: 94px;
+  --main-bg-color: #FFFFFF;
   --main-text-color: #212121;
   --main-active-color: #2196F3;
   --white-bg-txt: #FFFFFF;
+  --typical-margin: 94px;
+  --default-font-size: 14px;
+}
+
+body {
+  min-width: 320px;
+  font-size: var(--default-font-size);
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
 }
 
 body {
@@ -40,19 +49,36 @@ button {
 
 img {
   display: block;
+  min-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 1px solid red; */
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .visually-hidden {
@@ -164,28 +190,50 @@ img {
   margin-right: 50px;
 }
 
-.hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img.jpg);
-  max-width: 1600px;
-  margin: 0 auto;
-}
 .hero .container {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 480px) {
+  .hero .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .container {
+    width: 1200px;
+  }
 }
 .hero__title {
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6153;
   color: var(--white-bg-txt);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.3636;
+  }
 }
 .hero__button {
   font-family: "Roboto", sans-serif;
@@ -206,12 +254,21 @@ img {
 }
 .specialisation__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .specialisation__item {
-  width: 270px;
+  width: 450px;
 }
-.specialisation__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .specialisation__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specialisation__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .specialisation__container {
   height: 120px;
@@ -228,7 +285,13 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .specialisation__title {
+    text-align: unset;
+  }
 }
 .specialisation__text {
   font-weight: 400;
@@ -290,15 +353,20 @@ img {
 }
 .team__list {
   display: flex;
-  margin-left: -30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .person {
   background-color: var(--white-bg-txt);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc(25% - 30px);
-  margin-left: 30px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .person {
+    width: calc((100% - 30px) / 2);
+  }
 }
 .person__text {
   padding-top: 30px;
