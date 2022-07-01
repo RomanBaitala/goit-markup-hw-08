@@ -2,8 +2,15 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #2F303A;
-    display: flex;
     .container {
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @include desktop{
+            justify-content: unset;
+        }
     }
 }
 
@@ -19,11 +26,16 @@
 .footer-company-logo2 {
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     display: flex;
     justify-content: center;
+    @include desktop{
+        font-size: 26px;
+        line-height: 1.19;
+        justify-content: unset;
+    }
 }
 
 .footer-contacts {
@@ -38,6 +50,9 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include desktop {
+        justify-content: unset;
+    }
     &:hover,
     &:focus {
         color: #2196F3;
@@ -69,11 +84,17 @@
     margin-bottom: 20px;
     text-align: center;
     color: var(--white-bg-txt);
+    @include desktop{
+        text-align: unset;
+    }
 }
 
 .footer-social-list {
     display: flex;
     justify-content: center;
+    @include desktop {
+        justify-content: unset;
+    }
 }
 
 .footer-social-item {
@@ -105,11 +126,20 @@
 
 .addres-container {
     margin-bottom: 60px;
+    @include tablet{
+        margin-right: 165px;
+    }
+    @include desktop{
+        margin-right: 70px;
+    }
 }
 
 .social-container {
     padding-top: 12px;
     margin-bottom: 60px;
+    @include desktop{
+        margin-right: 93px;
+    }
 }
 
 .footer-sub-container {
@@ -120,8 +150,13 @@
 
 .footer-sub-form {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: unset;
+        align-items: unset;
+    }
 }
 
 .footer-sub-title {
@@ -133,6 +168,9 @@
     color: #FFFFFF;
     margin-bottom: 20px;
     text-align: center;
+    @include desktop{
+        text-align: unset;
+    }
 }
 
 .footer-sub-button {
@@ -163,12 +201,16 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #FFFFFF;
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding-left: 16px;
     background-color: transparent;
     outline: none;
     margin-bottom: 20px;
+    @include desktop{
+        width: 358px;
+        margin-right: 12px;
+    }
     &:hover,
     &:focus {
         border: 1px solid #2196F3;
