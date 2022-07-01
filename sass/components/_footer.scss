@@ -4,7 +4,6 @@
     background-color: #2F303A;
     display: flex;
     .container {
-        display: flex;
     }
 }
 
@@ -23,6 +22,8 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-contacts {
@@ -33,6 +34,7 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     display: flex;
+    justify-content: center;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,6 +57,7 @@
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
 .footer-link-title {
@@ -64,11 +67,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
     color: var(--white-bg-txt);
 }
 
 .footer-social-list {
     display: flex;
+    justify-content: center;
 }
 
 .footer-social-item {
@@ -99,22 +104,24 @@
 }
 
 .addres-container {
-    margin-right: 70px;
+    margin-bottom: 60px;
 }
 
 .social-container {
     padding-top: 12px;
-    margin-bottom: 40px;
-    margin-right: 93px;
+    margin-bottom: 60px;
 }
 
 .footer-sub-container {
     padding-top: 12px;
     padding-bottom: 32px;
+    
 }
 
 .footer-sub-form {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-sub-title {
@@ -125,6 +132,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .footer-sub-button {
@@ -157,11 +165,10 @@
     color: #FFFFFF;
     width: 358px;
     height: 50px;
-    margin-right: 12px;
     padding-left: 16px;
     background-color: transparent;
     outline: none;
-
+    margin-bottom: 20px;
     &:hover,
     &:focus {
         border: 1px solid #2196F3;

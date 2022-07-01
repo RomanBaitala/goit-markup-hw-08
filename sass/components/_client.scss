@@ -1,25 +1,34 @@
 .client__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.1785;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @include desktop{
+        font-size: 36px;
+        line-height: 1.1666;
+        margin-bottom: 50px;
+    }
 }
 
 .client__list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .client__item {
-    margin-right: 30px;
-    &:last-child {
-        margin-right: 0;
+    width: calc((100% - 30px) / 2);
+    @include tablet{
+        width: calc((100% - 60px) / 3);
+    }
+    @include desktop{
+        width: calc((100% - 150px) / 6);
     }
 }
 
 .client__link {
-    width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     fill: #AFB1B8;
