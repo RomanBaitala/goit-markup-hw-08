@@ -3,11 +3,8 @@ body {
     color: #212121;
 }
 
-.list {
-    list-style: none;
-}
 
-.link {
+a {
     text-decoration: none;
 }
 
@@ -25,6 +22,7 @@ ul,
 ol {
     margin: 0;
     padding-left: 0;
+    list-style: none;
 }
 
 button {

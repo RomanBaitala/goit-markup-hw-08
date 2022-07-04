@@ -1,8 +1,17 @@
 .header {
-    background-color: var(--white-bg-txt);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    background: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ECECEC;
+    position: relative;
+    @include tablet {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @include desktop {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
     .container {
         display: flex;
         align-items: center;
@@ -25,4 +34,121 @@
     font-size: 26px;
     line-height: 1.1924;
     letter-spacing: 0.03em;
+    @include desktop {
+        font-size: 24px;
+        line-height: 1.1666;
+    }
+}
+
+.nav__list {
+    display: none;
+    @include tablet{
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.nav__link {
+    color: var(--main-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1426;
+    letter-spacing: 0.02em;
+    display: flex;
+    margin-right: 50px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // position: relative;
+}
+
+.nav-studio,
+.nav-portfolio {
+    color: #2196F3;
+
+    &::after {
+        content: "";
+        width: 48px;
+        height: 4px;
+        background-color: #2196F3;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -32px;
+        @include tablet{
+            bottom: -1px;
+        }
+    }
+}
+
+.nav-portfolio {
+    &::after {
+        width: 78px;
+    }
+}
+
+.contact-list {
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include desktop {
+        flex-direction: unset;
+        margin-left: auto;
+        align-items: center;
+        padding: 0;
+    }
+
+
+    &__contacts {
+        display: none;
+        @include tablet{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.16;
+            letter-spacing: 0.02em;
+            color: #757575;
+            display: flex;
+            align-items: center;
+            transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover,
+            &:focus {
+                color: var(--main-active-color);
+            }    
+            &:hover .contact-list__icon,
+            &:focus .contact-list__icon {
+                fill: var(--main-active-color);
+            }
+        }
+        @include desktop {
+            font-style: normal;
+            font-size: 14px;
+            line-height: 1.14;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include tablet {
+            fill: #757575;
+            cursor: pointer;
+        }
+    }
+}
+
+.header-email {
+    @include tablet{
+        margin-bottom: 10px;
+    }
+    @include desktop{
+        margin-right: 50px;
+        margin-bottom: 0;
+    }   
 }
