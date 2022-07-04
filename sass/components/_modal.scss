@@ -12,8 +12,8 @@
 }
 
 .modal-window {
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -23,6 +23,10 @@
     transform: translate(-50%, -50%) scale(1);
     transition-timing-function: cubic-bezier(.37, .23, .94, .82);
     padding: 40px;
+    @include desktop {
+        width: 528px;
+        height: 581px;
+    }
 }
 
 .modal-button {
@@ -135,14 +139,18 @@
 
 .check-text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     color: #757575;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.714;
+    }
     &::before {
         content: "";
         width: 15px;
@@ -166,12 +174,16 @@
 
 .modal-link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: #2196F3;
-    margin-left: 4px;
+    margin-left: 1px;
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.714;
+    }
 }
 
 .modal-submit-button {
