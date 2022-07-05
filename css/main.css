@@ -1109,11 +1109,6 @@ img {
   transition: transform 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 479px) {
-  .site-top-text {
-    padding: 50px 24px;
-  }
-}
 @media screen and (min-width: 768px) {
   .site-top-text {
     padding: 49px 24px 77px 24px;

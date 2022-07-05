@@ -71,9 +71,6 @@
     transform: translateY(100%);
     transition: transform 250ms linear;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (max-width: 479px) {
-        padding: 50px 24px;
-    }
     @include tablet {
         padding: 49px 24px 77px 24px;
     }
