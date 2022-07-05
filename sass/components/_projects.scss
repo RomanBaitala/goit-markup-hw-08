@@ -31,19 +31,18 @@
 }
 
 .site-item {
-    @include mobile {
-        box-sizing: content-box;
-        outline: 1px solid #EEEEEE;
-        transition-property: box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        &:hover,
-        &:focus {
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-        }
-        &:hover .site-top-text {
-            transform: translateY(0);
-        }
+    box-sizing: content-box;
+    width: 100%;
+    outline: 1px solid #EEEEEE;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    &:hover .site-top-text {
+        transform: translateY(0);
     }
     @include tablet {
         width: calc((100% - 30px) / 2);
@@ -51,16 +50,6 @@
     @include desktop {
         width: calc((100% - 60px) / 3);
     }
-}
-
-.site-img{
-    width: 450px;  
-        @include tablet {
-            width: 354px;
-        }
-        @include desktop {
-            width: 370px;
-        }
 }
 
 .site-top-wrapper {
