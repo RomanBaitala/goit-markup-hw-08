@@ -341,9 +341,23 @@
                     <li class="site-item">
                         <a class="project-link link" href="">
                             <div class="site-top-wrapper">
-                                <img class="site-img" src="images/laptop.jpg" alt="Growing Business" width="370" height="294">
-                                <p class="site-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
-                                    дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу</p>
+                                <picture>
+                                    <source srcset="
+                                    ./images/deck-adapt/decktop-project-9.jpg  1x,
+                                    ./images/deck-adapt/decktop-project-9@2.jpg  2x
+                                    " media="(min-width: 1200px)" />
+                                    <source srcset="
+                                    ./images/tab-adapt/tablet-project-9.jpg  1x,
+                                    ./images/tab-adapt/tablet-project-9@2.jpg  2x
+                                    " media="(min-width: 768px)" />
+                                    <source srcset="
+                                    ./images/mob-adapt/mobile-project-9.jpg  1x,
+                                    ./images/mob-adapt/mobile-project-9@2.jpg  2x
+                                    " media="(min-width:480px)" />
+                                    <img class="site-img" src="images/mob-adapt/mobile-project-9.jpg" alt="Технокряк" width="370" height="294">
+                                    <p class="site-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
+                                        дозволить відвідувачу отримати вичерпні відомості про компанію або приватну особу</p>
+                                </picture>
                             </div>
                             <div class="project-info">
                                 <h2 class="project-title">Growing Business</h2>
