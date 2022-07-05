@@ -395,14 +395,40 @@ img {
   color: #2196F3;
 }
 
-.hero .container {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img.jpg);
+.hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mob-adapt/mobile-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
-  min-height: 400px;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mob-adapt/mobile-hero@2.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tab-adapt/tablet-hero.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tab-adapt/tablet-hero@2.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/deck-adapt/decktop-hero.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/deck-adapt/decktop-hero@2.jpg);
+  }
+}
+.hero .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,18 +437,16 @@ img {
 }
 @media screen and (min-width: 480px) {
   .hero .container {
-    width: 480px;
+    padding: 118px 60px;
   }
 }
 @media screen and (min-width: 768px) {
   .hero .container {
-    width: 768px;
+    padding: 118px 204px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero .container {
-    width: 1200px;
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -535,7 +559,7 @@ img {
 .work__container {
   position: relative;
 }
-.work__container > .work__text {
+.work__container .work__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
@@ -942,12 +966,17 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: #FFFFFF;
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   background-color: transparent;
   outline: none;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer-sub-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-sub-input {

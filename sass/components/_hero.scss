@@ -1,31 +1,41 @@
 .hero {
-    .container {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        max-width: 1600px;
-        min-height: 400px;                
-        margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mob-adapt/mobile-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mob-adapt/mobile-hero@2.jpg);
+    }
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tab-adapt/tablet-hero.jpg);
+    }
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tab-adapt/tablet-hero@2.jpg);
+    }
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/deck-adapt/decktop-hero.jpg);
+    }
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/deck-adapt/decktop-hero@2.jpg);
+    }
+    .container {   
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 118px;
         padding-bottom: 118px;
         @include mobile {
-                width: 480px;
-            }
-        
-            @include tablet {
-                width: 768px;
-            }
-        
-            @include desktop {
-                width: 1200px;
-                max-width: 1600px;
-                padding-top: 200px;
-                padding-bottom: 200px;
-            }
+            padding: 118px 60px;
+        }    
+        @include tablet {
+            padding: 118px 204px;
+        }        
+        @include desktop {
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
     }
     &__title {
         font-style: normal;
