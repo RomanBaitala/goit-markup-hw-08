@@ -1,12 +1,10 @@
 .hero {
-    @include mobile{
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob-adapt/mobile-hero.jpg);
-        max-width: 1600px;
-        margin: 0 auto;
-    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob-adapt/mobile-hero.jpg);
+    max-width: 1600px;
+    margin: 0 auto;
     @include retina {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob-adapt/mobile-hero@2.jpg);
     }
@@ -26,7 +24,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media screen and (max-width: 479px) {
+        @media screen and (max-width: 480px) {
             padding-top: 118px;
             padding-bottom: 118px;
             padding-right: 30px;
