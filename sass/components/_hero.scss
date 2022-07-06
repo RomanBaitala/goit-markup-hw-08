@@ -10,29 +10,21 @@
     }
     @include tablet {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tab-adapt/tablet-hero.jpg);
-    }
-    @include retina {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tab-adapt/tablet-hero@2.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tab-adapt/tablet-hero@2.jpg);
+        }
     }
     @include desktop {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/deck-adapt/decktop-hero.jpg);
-    }
-    @include retina {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/deck-adapt/decktop-hero@2.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/deck-adapt/decktop-hero@2.jpg);
+        }
     }
     .container {   
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media screen and (max-width: 480px) {
-            padding-top: 118px;
-            padding-bottom: 118px;
-            padding-right: 30px;
-            padding-left: 30px;
-        }
-        @include mobile {
-            padding: 118px 60px;
-        }    
+        padding: 118px 60px;   
         @include tablet {
             padding: 118px 204px;
         }        
