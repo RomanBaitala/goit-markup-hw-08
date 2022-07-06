@@ -5,6 +5,13 @@
     position: fixed;
     top: 0;
     transition: opacity 300ms, visibility 300ms;
+    @media screen and (max-width: 767px) {
+        padding-top: 93px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    transition: opacity 300ms, visibility 300ms;
     &.is-hidden .modal {
         transform: translate(-50%, -50%) scale(0);
         transition: transform 250ms linear;
@@ -12,8 +19,6 @@
 }
 
 .modal-window {
-    width: 450px;
-    height: 609px;
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -23,9 +28,21 @@
     transform: translate(-50%, -50%) scale(1);
     transition-timing-function: cubic-bezier(.37, .23, .94, .82);
     padding: 40px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        position: relative;
+    }
+    @include mobile{
+        width: 450px;
+        position: absolute;
+    }
+    @include tablet{
+        min-height: 609px;
+        min-width: 450px;
+    }
     @include desktop {
-        width: 528px;
-        height: 581px;
+        min-width: 528px;
+        min-height: 581px;
     }
 }
 
@@ -143,7 +160,7 @@
     line-height: 1.166;
     letter-spacing: 0.03em;
     color: #757575;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;

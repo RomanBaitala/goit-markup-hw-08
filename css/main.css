@@ -48,7 +48,6 @@ img {
   display: block;
   min-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 .container {
@@ -371,12 +370,14 @@ img {
 
 .mob-soc-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-soc-item {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 
 .mob-soc-item:first-child {
@@ -885,22 +886,30 @@ img {
 @media screen and (min-width: 1200px) {
   .addres-container {
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
 .social-container {
-  padding-top: 12px;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .social-container {
+    padding-top: 5px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .social-container {
     margin-right: 93px;
+    margin-bottom: 0;
+    padding-top: 12px;
   }
 }
 
-.footer-sub-container {
-  padding-top: 12px;
-  padding-bottom: 32px;
+@media screen and (min-width: 1200px) {
+  .footer-sub-container {
+    padding-top: 12px;
+  }
 }
 
 .footer-sub-form {
@@ -1099,7 +1108,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .site-top-text {
-    padding: 49px 24px 77px 24px;
+    padding: 49px 24px 90px 24px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1136,6 +1145,15 @@ img {
   position: fixed;
   top: 0;
   transition: opacity 300ms, visibility 300ms;
+  transition: opacity 300ms, visibility 300ms;
+}
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -1143,8 +1161,6 @@ img {
 }
 
 .modal-window {
-  width: 450px;
-  height: 609px;
   background-color: #FFFFFF;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1155,10 +1171,28 @@ img {
   transition-timing-function: cubic-bezier(0.37, 0.23, 0.94, 0.82);
   padding: 40px;
 }
+@media screen and (max-width: 767px) {
+  .modal-window {
+    width: 100%;
+    position: relative;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal-window {
+    width: 450px;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-window {
+    min-height: 609px;
+    min-width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal-window {
-    width: 528px;
-    height: 581px;
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -1273,7 +1307,7 @@ img {
   line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
